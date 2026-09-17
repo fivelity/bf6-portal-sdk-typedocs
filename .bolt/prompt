@@ -1,0 +1,30 @@
+BF6 Portal SDK Docs
+
+1. Project Core Specification:
+   - Target Application: BF6 Portal SDK Documentation SPA built using VitePress and TypeDoc.
+   - Hosting Target: GitHub Pages (ensure `base` in `docs/.vitepress/config.ts` matches repo name or subpath).
+   - Tracked SDK Version: 1.4.3.0 (stored in root `VERSION` file).
+
+2. SDK Parsing & Document Build Pipeline:
+   - Source Files: `sdk/index.ts` and `sdk/mod.d.ts`.
+   - Output Location: Generate TypeDoc Markdown directly into `docs/api`.
+   - Script Workflow in package.json:
+     - "docs:dev": "vitepress dev docs --port 5173 --host"
+     - "docs:generate": "typedoc"
+     - "docs:build": "typedoc && vitepress build docs"
+     - "build:all": "npm run docs:generate && npm run docs:build"
+   - Support manual updates: Whenever `sdk/` files change, running `npm run build:all` must regenerate `docs/api` without affecting manual files in `docs/guide/`.
+
+3. Site Architecture & Layout:
+   - Theme: Battlefield tactical dark theme (Primary: #E8A020 amber/gold, Background: #0D0F14, Surface: #1A1D24).
+   - Routes:
+     - `/` - Landing Hero Page with CTA buttons & version badge
+     - `/guide/` - Getting Started, Installation, Usage Examples
+     - `/api/` - Auto-generated TypeDoc API Reference
+     - `/changelog` - Version release log
+     - `/community` - Styled community link grid
+     - `/archive/` - Archived version documentation (e.g., `docs/archive/v1.4.2.0/`)
+
+4. Deployment & CI/CD Output:
+   - Build Output Directory: `docs/.vitepress/dist`
+   - GitHub Actions Workflow (`.github/workflows/docs.yml`): Polls for new SDK releases, archives existing `/docs/api` into `/docs/archive/vX.X.X/`, updates `VERSION` and `CHANGELOG.md`, runs TypeDoc + VitePress build, and deploys to GitHub Pages.

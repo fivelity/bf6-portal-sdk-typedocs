@@ -1,0 +1,101 @@
+name: Auto-Generate & Deploy SDK Docs
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+env:
+  SDK_PACKAGE: bf6-portal-sdk
+  DOCS_BASE: /${{ github.event.repository.name }}/
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  check-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Get latest SDK version
+        id: sdk_version
+        shell: bash
+        run: echo "latest=$(npm view "$SDK_PACKAGE" version)" >> "$GITHUB_OUTPUT"
+
+      - name: Read current documented version
+        id: current_version
+        shell: bash
+        run: echo "current=$(cat VERSION 2>/dev/null || printf '0.0.0')" >> "$GITHUB_OUTPUT"
+
+      - name: Check for release changes
+        id: changed
+        run: |
+          if [ "${{ steps.sdk_version.outputs.latest }}" = "${{ steps.current_version.outputs.current }}" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Archive current API reference
+        if: steps.changed.outputs.changed == 'true' && steps.current_version.outputs.current != '0.0.0'
+        run: |
+          mkdir -p "docs/archive/v${{ steps.current_version.outputs.current }}"
+          cp -R docs/api "docs/archive/v${{ steps.current_version.outputs.current }}/api"
+
+      - name: Install dependencies
+        if: steps.changed.outputs.changed == 'true'
+        run: npm ci
+
+      - name: Install latest SDK
+        if: steps.changed.outputs.changed == 'true'
+        run: npm install "$SDK_PACKAGE@${{ steps.sdk_version.outputs.latest }}" --save-dev
+
+      - name: Generate API reference
+        if: steps.changed.outputs.changed == 'true'
+        run: npm run docs:generate
+
+      - name: Update release records
+        if: steps.changed.outputs.changed == 'true'
+        shell: bash
+        run: |
+          printf '%s\n' "${{ steps.sdk_version.outputs.latest }}" > VERSION
+          DATE=$(date -u +%Y-%m-%d)
+          TMP=$(mktemp)
+          {
+            printf '## v%s — %s\n\n' "${{ steps.sdk_version.outputs.latest }}" "$DATE"
+            printf 'Auto-generated from the official SDK release.\n\n'
+            printf 'The API reference was regenerated from the published package.\n\n'
+            cat docs/changelog.md
+          } > "$TMP"
+          mv "$TMP" docs/changelog.md
+
+      - name: Build VitePress
+        if: steps.changed.outputs.changed == 'true'
+        run: npm run docs:build
+        env:
+          DOCS_BASE: /${{ github.event.repository.name }}/
+
+      - name: Deploy to GitHub Pages
+        if: steps.changed.outputs.changed == 'true'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
+
+      - name: Commit release records
+        if: steps.changed.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add VERSION docs/api docs/archive docs/changelog.md package.json package-lock.json
+          git commit -m "docs: update to SDK v${{ steps.sdk_version.outputs.latest }}"
+          git push

@@ -1,0 +1,20 @@
+{
+  "name": "bf6-portal-sdk-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "docs:generate": "typedoc"
+  },
+  "devDependencies": {
+    "typedoc": "^0.28.13",
+    "typedoc-plugin-markdown": "^4.8.0",
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "bf6-portal-mod-types": "^4.2.0",
+    "bf6-portal-utils": "^9.4.0"
+  }
+}
