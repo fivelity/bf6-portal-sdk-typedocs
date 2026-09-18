@@ -8,7 +8,7 @@
 
 > **getTeamId**(`team`): `number`
 
-Defined in: index.ts:29
+Defined in: sdk/index.ts:29
 
 ## Parameters
 

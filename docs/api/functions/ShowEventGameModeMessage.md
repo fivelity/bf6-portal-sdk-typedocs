@@ -8,7 +8,7 @@
 
 > **ShowEventGameModeMessage**(`event`, `target?`): `void`
 
-Defined in: index.ts:632
+Defined in: sdk/index.ts:632
 
 ## Parameters
 

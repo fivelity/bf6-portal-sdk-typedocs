@@ -1,5 +1,5 @@
 {
-  "entryPoints": ["./sdk/index.ts"],
+  "entryPoints": ["./sdk/docs-entry.ts"],
   "tsconfig": "./tsconfig.json",
   "out": "docs/api",
   "plugin": ["typedoc-plugin-markdown"],
@@ -8,5 +8,6 @@
   "excludeInternal": true,
   "githubPages": false,
   "hideBreadcrumbs": false,
-  "hidePageHeader": false
+  "hidePageHeader": false,
+  "entryPointStrategy": "resolve"
 }

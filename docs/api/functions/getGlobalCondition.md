@@ -8,7 +8,7 @@
 
 > **getGlobalCondition**(`n`): [`ConditionState`](../classes/ConditionState.md)
 
-Defined in: index.ts:224
+Defined in: sdk/index.ts:224
 
 ## Parameters
 

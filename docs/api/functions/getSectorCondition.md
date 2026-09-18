@@ -8,7 +8,7 @@
 
 > **getSectorCondition**(`obj`, `n`): [`ConditionState`](../classes/ConditionState.md)
 
-Defined in: index.ts:214
+Defined in: sdk/index.ts:214
 
 ## Parameters
 

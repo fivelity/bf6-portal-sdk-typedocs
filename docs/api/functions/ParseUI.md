@@ -8,7 +8,7 @@
 
 > **ParseUI**(...`params`): `UIWidget`
 
-Defined in: index.ts:548
+Defined in: sdk/index.ts:548
 
 ## Parameters
 

@@ -6,7 +6,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:generate": "typedoc"
+    "docs:generate": "typedoc",
+    "build:all": "npm run docs:generate && npm run docs:build"
   },
   "devDependencies": {
     "typedoc": "^0.28.13",

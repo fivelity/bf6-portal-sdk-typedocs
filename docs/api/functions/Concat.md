@@ -8,7 +8,7 @@
 
 > **Concat**(`s1`, `s2`): `string`
 
-Defined in: index.ts:3
+Defined in: sdk/index.ts:3
 
 ## Parameters
 

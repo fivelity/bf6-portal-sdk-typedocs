@@ -8,7 +8,7 @@
 
 > **SortedArray**(`array`, `compare`): `any`[]
 
-Defined in: index.ts:89
+Defined in: sdk/index.ts:89
 
 ## Parameters
 

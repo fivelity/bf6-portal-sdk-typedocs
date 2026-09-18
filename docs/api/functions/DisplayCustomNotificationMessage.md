@@ -8,7 +8,7 @@
 
 > **DisplayCustomNotificationMessage**(`msg`, `custom`, `duration`, `target?`): `void`
 
-Defined in: index.ts:556
+Defined in: sdk/index.ts:556
 
 ## Parameters
 

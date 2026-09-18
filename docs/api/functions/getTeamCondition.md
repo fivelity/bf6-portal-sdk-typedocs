@@ -8,7 +8,7 @@
 
 > **getTeamCondition**(`team`, `n`): [`ConditionState`](../classes/ConditionState.md)
 
-Defined in: index.ts:185
+Defined in: sdk/index.ts:185
 
 ## Parameters
 

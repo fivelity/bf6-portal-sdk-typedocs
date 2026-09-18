@@ -8,7 +8,7 @@
 
 > **getSimpleCondition**(): [`SimpleConditionState`](../classes/SimpleConditionState.md)
 
-Defined in: index.ts:228
+Defined in: sdk/index.ts:228
 
 ## Returns
 

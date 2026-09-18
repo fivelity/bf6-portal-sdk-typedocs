@@ -8,7 +8,7 @@
 
 > **IfThenElse**\<`T`\>(`condition`, `ifTrue`, `ifFalse`): `T`
 
-Defined in: index.ts:64
+Defined in: sdk/index.ts:64
 
 ## Type Parameters
 

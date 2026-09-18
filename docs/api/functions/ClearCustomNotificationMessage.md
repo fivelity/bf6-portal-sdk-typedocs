@@ -8,7 +8,7 @@
 
 > **ClearCustomNotificationMessage**(`custom`, `target?`): `void`
 
-Defined in: index.ts:726
+Defined in: sdk/index.ts:726
 
 ## Parameters
 

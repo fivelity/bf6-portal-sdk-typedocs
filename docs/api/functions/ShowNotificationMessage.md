@@ -8,7 +8,7 @@
 
 > **ShowNotificationMessage**(`msg`, `target?`): `void`
 
-Defined in: index.ts:700
+Defined in: sdk/index.ts:700
 
 ## Parameters
 

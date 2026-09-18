@@ -8,7 +8,7 @@
 
 > **IsTrueForAll**(`array`, `condition`, `arg?`): `boolean`
 
-Defined in: index.ts:69
+Defined in: sdk/index.ts:69
 
 ## Parameters
 

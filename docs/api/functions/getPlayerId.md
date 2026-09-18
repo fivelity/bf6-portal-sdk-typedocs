@@ -8,7 +8,7 @@
 
 > **getPlayerId**(`player`): `number`
 
-Defined in: index.ts:25
+Defined in: sdk/index.ts:25
 
 ## Parameters
 

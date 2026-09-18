@@ -8,7 +8,7 @@
 
 > **getPlayersInTeam**(`teamObj`): `any`[]
 
-Defined in: index.ts:232
+Defined in: sdk/index.ts:232
 
 ## Parameters
 

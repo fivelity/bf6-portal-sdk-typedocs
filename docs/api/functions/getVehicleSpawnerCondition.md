@@ -8,7 +8,7 @@
 
 > **getVehicleSpawnerCondition**(`obj`, `n`): [`ConditionState`](../classes/ConditionState.md)
 
-Defined in: index.ts:219
+Defined in: sdk/index.ts:219
 
 ## Parameters
 

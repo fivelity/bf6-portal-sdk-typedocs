@@ -8,7 +8,7 @@
 
 > **FilteredArray**(`array`, `cond`): `Array`
 
-Defined in: index.ts:43
+Defined in: sdk/index.ts:43
 
 ## Parameters
 

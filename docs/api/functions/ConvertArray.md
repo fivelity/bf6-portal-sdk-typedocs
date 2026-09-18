@@ -8,7 +8,7 @@
 
 > **ConvertArray**(`array`): `any`[]
 
-Defined in: index.ts:33
+Defined in: sdk/index.ts:33
 
 ## Parameters
 

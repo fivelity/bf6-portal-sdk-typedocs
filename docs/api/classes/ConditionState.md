@@ -6,7 +6,7 @@
 
 # Class: ConditionState
 
-Defined in: index.ts:113
+Defined in: sdk/index.ts:113
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: index.ts:113
 
 > **new ConditionState**(): `ConditionState`
 
-Defined in: index.ts:116
+Defined in: sdk/index.ts:116
 
 #### Returns
 
@@ -26,7 +26,7 @@ Defined in: index.ts:116
 
 > **lastState**: `boolean`
 
-Defined in: index.ts:114
+Defined in: sdk/index.ts:114
 
 ## Methods
 
@@ -34,7 +34,7 @@ Defined in: index.ts:114
 
 > **update**(`newState`): `boolean`
 
-Defined in: index.ts:120
+Defined in: sdk/index.ts:120
 
 #### Parameters
 

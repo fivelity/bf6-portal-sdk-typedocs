@@ -8,7 +8,7 @@
 
 > **Equals**(`a`, `b`): `boolean`
 
-Defined in: index.ts:97
+Defined in: sdk/index.ts:97
 
 ## Parameters
 

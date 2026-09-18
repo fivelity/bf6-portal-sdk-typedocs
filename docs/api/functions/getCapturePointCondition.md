@@ -8,7 +8,7 @@
 
 > **getCapturePointCondition**(`obj`, `n`): [`ConditionState`](../classes/ConditionState.md)
 
-Defined in: index.ts:194
+Defined in: sdk/index.ts:194
 
 ## Parameters
 

@@ -8,7 +8,7 @@
 
 > **ShowHighlightedGameModeMessage**(`event`, `target?`): `void`
 
-Defined in: index.ts:692
+Defined in: sdk/index.ts:692
 
 ## Parameters
 

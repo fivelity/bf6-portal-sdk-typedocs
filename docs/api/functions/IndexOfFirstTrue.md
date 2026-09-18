@@ -8,7 +8,7 @@
 
 > **IndexOfFirstTrue**(`array`, `cond`, `arg?`): `number`
 
-Defined in: index.ts:54
+Defined in: sdk/index.ts:54
 
 ## Parameters
 

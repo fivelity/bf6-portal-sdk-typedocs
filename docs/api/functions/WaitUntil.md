@@ -8,7 +8,7 @@
 
 > **WaitUntil**(`delay`, `cond`): `Promise`\<`void`\>
 
-Defined in: index.ts:103
+Defined in: sdk/index.ts:103
 
 ## Parameters
 

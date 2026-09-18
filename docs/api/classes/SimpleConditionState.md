@@ -6,7 +6,7 @@
 
 # Class: SimpleConditionState
 
-Defined in: index.ts:134
+Defined in: sdk/index.ts:134
 
 ## Constructors
 
@@ -24,7 +24,7 @@ Defined in: index.ts:134
 
 > **update**(`newState`): `boolean`
 
-Defined in: index.ts:135
+Defined in: sdk/index.ts:135
 
 #### Parameters
 

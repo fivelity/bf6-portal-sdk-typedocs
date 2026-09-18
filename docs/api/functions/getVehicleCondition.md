@@ -8,7 +8,7 @@
 
 > **getVehicleCondition**(`obj`, `n`): [`ConditionState`](../classes/ConditionState.md)
 
-Defined in: index.ts:204
+Defined in: sdk/index.ts:204
 
 ## Parameters
 

@@ -5,7 +5,15 @@
     "moduleResolution": "Bundler",
     "strict": false,
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["sdk/index.ts", "sdk/mod.d.ts"]
+  "include": [
+    "sdk/index.ts",
+    "sdk/mod.d.ts",
+    "sdk/docs-entry.ts",
+    "node_modules/bf6-portal-utils/*/index.ts"
+  ]
 }

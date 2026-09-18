@@ -8,7 +8,7 @@
 
 > **And**(...`rest`): `boolean`
 
-Defined in: index.ts:7
+Defined in: sdk/index.ts:7
 
 ## Parameters
 
