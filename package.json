@@ -3,11 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
+    "docs:dev": "vitepress dev docs --port 5173 --host",
+    "docs:build": "typedoc && vitepress build docs",
+    "docs:preview": "vitepress preview docs --port 5173 --host",
     "docs:generate": "typedoc",
-    "build:all": "npm run docs:generate && npm run docs:build"
+    "build:all": "npm run docs:generate && vitepress build docs"
   },
   "devDependencies": {
     "typedoc": "^0.28.13",
