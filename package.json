@@ -10,9 +10,10 @@
     "build:all": "npm run docs:generate && vitepress build docs"
   },
   "devDependencies": {
-    "typedoc": "^0.28.13",
-    "typedoc-plugin-markdown": "^4.8.0",
-    "vitepress": "^1.6.4"
+    "@types/node": "^26.6.2",
+    "typedoc": "^0.28.20",
+    "typedoc-plugin-markdown": "^4.13.1",
+    "vitepress": "^2.0.0-alpha.20"
   },
   "dependencies": {
     "bf6-portal-mod-types": "^4.2.0",
