@@ -1,0 +1,123 @@
+:root {
+  --vp-c-brand-1: #e8a020;
+  --vp-c-brand-2: #f2b83f;
+  --vp-c-brand-3: #c9820f;
+  --vp-c-brand-soft: rgba(232, 160, 32, 0.14);
+  --vp-c-bg: #0b0d10;
+  --vp-c-bg-alt: #101217;
+  --vp-c-bg-elv: #15181d;
+  --vp-c-bg-soft: #12151a;
+  --vp-c-divider: #292e35;
+  --vp-c-text-1: #e2e8f0;
+  --vp-c-text-2: #a7afb9;
+  --vp-c-text-3: #717a84;
+  --vp-font-family-base: Inter, ui-sans-serif, system-ui, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Cascadia Code', monospace;
+}
+
+html {
+  background: var(--vp-c-bg);
+}
+
+body {
+  background: var(--vp-c-bg);
+}
+
+.VPNav {
+  background: rgba(11, 13, 16, 0.9) !important;
+  border-bottom: 1px solid var(--vp-c-divider);
+  backdrop-filter: blur(12px);
+}
+
+.VPNavBarTitle .title {
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.VPNavBarTitle .logo {
+  max-width: 146px;
+}
+
+.VPLink.active,
+.VPLink:hover {
+  color: var(--vp-c-brand-1) !important;
+}
+
+.VPHero .name,
+.VPHero .text {
+  color: var(--vp-c-brand-1);
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+}
+
+.VPButton {
+  border-radius: 0;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.VPButton.brand {
+  color: #0b0d10;
+  box-shadow: 4px 4px 0 rgba(232, 160, 32, 0.22);
+}
+
+.VPFeature,
+.custom-block,
+.vp-code-group,
+div[class*='language-'] {
+  border-radius: 0;
+}
+
+.VPFeature {
+  border-color: var(--vp-c-divider);
+  background: rgba(16, 18, 23, 0.8);
+}
+
+.VPFeature:hover {
+  border-color: rgba(232, 160, 32, 0.5);
+}
+
+.VPDoc h1,
+.VPDoc h2 {
+  letter-spacing: -0.02em;
+}
+
+.VPDoc h2 {
+  border-top-color: var(--vp-c-divider);
+}
+
+.VPDoc h2::before {
+  color: var(--vp-c-brand-1);
+  content: '//';
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.7em;
+  margin-right: 0.55em;
+  vertical-align: 0.08em;
+}
+
+.vp-code-group .tabs label {
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 2.5rem;
+  }
+
+  .VPNavBarTitle .logo {
+    max-width: 120px;
+  }
+}
