@@ -3,12 +3,12 @@
 Build together, share rulesets, and compare Portal experiments with other creators.
 
 <div class="community-grid">
-  <a class="community-card" href="https://github.com/your-org/your-repo">
+  <a class="community-card" href="https://github.com/fivelity/bf6-portal-sdk-typedocs">
     <span class="community-index">01 / CODE</span>
     <strong>GitHub Repository</strong>
     <span>Source, issues, and documentation updates.</span>
   </a>
-  <a class="community-card" href="https://github.com/your-org/your-repo/discussions">
+  <a class="community-card" href="https://github.com/fivelity/bf6-portal-sdk-typedocs/discussions">
     <span class="community-index">02 / BRIEFING</span>
     <strong>Discussions</strong>
     <span>Ask questions and share implementation patterns.</span>
